@@ -44,9 +44,8 @@
     <!-- Main Footer -->
     @include('admin-lte::layouts.main-footer.main')
 
-    <!-- Control Sidebar -->
-    {{-- @include('admin-lte::layouts.control-sidebar.main') --}}
   </div>
+  @yield('pagescript')
   @section('scripts')
   <script src="{{ mix('/js/manifest.js') }}" charset="utf-8"></script>
   <script src="{{ mix('/js/vendor.js') }}" charset="utf-8"></script>

@@ -15,12 +15,51 @@
 
 @section('sidebar-menu')
 <ul class="sidebar-menu">
-  <li class="header">MAIN NAVIGATOR</li>
-  <li class="active">
+   <li class="header">MAIN NAVIGATOR</li>
+  @hasrole('writer')
+  <li>
     <a href="{{ route('home') }}">
-      <i class="fa fa-home"></i>
-      <span>Home</span>
+      <i class="fa fa-area-chart"></i>
+      <span>Kelola Statistik</span>
     </a>
   </li>
+  <li>
+    <a href="{{ route('home') }}">
+      <i class="fa fa-map-marker"></i>
+      <span>Kelola Geolokasi</span>
+    </a>
+  </li>
+  @endhasrole
+
+  @hasrole('admin')
+  <li>
+    <a href="{{ route('users.index') }}">
+      <i class="fa fa-user"></i>
+      <span>Kelola User</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ route('roles.index') }}">
+      <i class="fa fa-user"></i>
+      <span>Kelola Role</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ route('keloladata.index') }}">
+      <i class="fa fa-user"></i>
+      <span>Kelola Import Data</span>
+    </a>
+  </li>
+  @endhasrole
+
+  @hasrole('aom')
+  <li>
+    <a href="{{ route('roles.index') }}">
+      <i class="fa fa-user"></i>
+      <span>Kelola AOM</span>
+    </a>
+  </li>
+  @endhasrole
 </ul>
+  
 @endsection

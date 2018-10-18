@@ -30,7 +30,7 @@ try {
  */
 
 window.axios = require('axios');
-
+window.chart = require('chart.js');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
@@ -62,7 +62,7 @@ if (token) {
 //     key: 'your-pusher-key'
 // });
 
-$(document).ready(function() {
+$(document).ready(function () {
   $('.i-checks').iCheck({
     checkboxClass: 'icheckbox_square-blue',
     radioClass: 'iradio_square-blue'
@@ -71,5 +71,10 @@ $(document).ready(function() {
   $('.js-datepicker').datepicker({
     autoclose: true,
     todayHighlight: true
-  })
+  });
+
+  $('#bangsadhayam').click(function () {
+    alert("negacicalaka");
+  });
+
 });
