@@ -55,6 +55,6 @@
 
 
 {!! $data->render() !!}
-<button id="bangsadhayam"> test</button>
+<!-- <button id="bangsadhayam"> test</button> -->
 
 @endsection

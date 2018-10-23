@@ -29,7 +29,10 @@ class PermissionTableSeeder extends Seeder
             'lihat-statistik',
             'kelola-aom',
             'import-data',
-            'export-data'
+            'export-data',
+            'lihat-nasabah-unit',
+            'lihat-pendapatan-unit',
+            'lihat-noa-unit'
         ];
 
 

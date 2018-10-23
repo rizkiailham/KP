@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\master;
+use File;
+use Excel;
 use Illuminate\Http\Request;
+use Session;
+use DB;
 
 class KelolaDataController extends Controller
 {
@@ -84,7 +89,7 @@ class KelolaDataController extends Controller
 
     public function import(Request $request)
     {
-        ini_set('max_execution_time', 680);
+        ini_set('max_execution_time', 360);
         $dateinit = \Carbon\Carbon::parse($request->dateini);
         $datefim = \Carbon\Carbon::parse($request->datefim);
         $this->validate($request, array(
@@ -172,7 +177,7 @@ class KelolaDataController extends Controller
                         if (!empty($insert)) {
                             $insertData = DB::table('masters')->insert($insert);
                             if ($insertData) {
-                                Session::flash('success', 'Your Data has successfully imported');
+                                Session::flash('success', 'Data Berhasil diimport');
                             } else {
                                 Session::flash('error', 'Error inserting the data..');
                                 return back();
@@ -182,7 +187,7 @@ class KelolaDataController extends Controller
                     return back();
                 });
             } else {
-                Session::flash('error', 'File is a ' . $extension . ' file.!! Please upload a valid xls/csv file..!!');
+                Session::flash('error', 'file adalah ' . $extension . ' silahkan upload file excel hari ini yang terbaru');
                 return back();
             }
         }

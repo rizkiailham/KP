@@ -1,4 +1,4 @@
-window._ = require('lodash');
+window._ = require("lodash");
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -7,20 +7,20 @@ window._ = require('lodash');
  */
 
 try {
-  window.$ = window.jQuery = require('jquery');
+  window.$ = window.jQuery = require("jquery");
 
-  require('bootstrap-sass');
+  require("bootstrap-sass");
 
-  require('jquery-slimscroll');
+  require("jquery-slimscroll");
 
-  require('fastclick');
+  require("fastclick");
 
-  require('icheck');
+  require("icheck");
 
   // bootstrap-datepicker
-  require('bootstrap-datepicker');
+  require("bootstrap-datepicker");
 
-  require('admin-lte');
+  require("admin-lte");
 } catch (e) {}
 
 /**
@@ -29,9 +29,9 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = require('axios');
-window.chart = require('chart.js');
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios = require("axios");
+window.chart = require("chart.js");
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
@@ -42,9 +42,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 let token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+  console.error(
+    "CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token"
+  );
 }
 
 /**
@@ -62,19 +64,18 @@ if (token) {
 //     key: 'your-pusher-key'
 // });
 
-$(document).ready(function () {
-  $('.i-checks').iCheck({
-    checkboxClass: 'icheckbox_square-blue',
-    radioClass: 'iradio_square-blue'
+$(document).ready(function() {
+  $(".i-checks").iCheck({
+    checkboxClass: "icheckbox_square-blue",
+    radioClass: "iradio_square-blue"
   });
 
-  $('.js-datepicker').datepicker({
+  $(".js-datepicker").datepicker({
     autoclose: true,
     todayHighlight: true
   });
 
-  $('#bangsadhayam').click(function () {
+  $("#bangsadhayam").click(function() {
     alert("negacicalaka");
   });
-
 });

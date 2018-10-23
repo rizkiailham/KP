@@ -16,7 +16,7 @@
 @section('sidebar-menu')
 <ul class="sidebar-menu">
    <li class="header">MAIN NAVIGATOR</li>
-  @hasrole('writer')
+  @hasrole('bisnis')
   <li>
     <a href="{{ route('home') }}">
       <i class="fa fa-area-chart"></i>
@@ -27,6 +27,12 @@
     <a href="{{ route('home') }}">
       <i class="fa fa-map-marker"></i>
       <span>Kelola Geolokasi</span>
+    </a>
+  </li>
+  <li>
+    <a href="{{ route('home') }}">
+      <i class="fa fa-map-marker"></i>
+      <span>Eksport Data</span>
     </a>
   </li>
   @endhasrole
@@ -52,9 +58,9 @@
   </li>
   @endhasrole
 
-  @hasrole('aom')
+  @hasrole('AOM')
   <li>
-    <a href="{{ route('roles.index') }}">
+    <a href="{{ route('aom') }}">
       <i class="fa fa-user"></i>
       <span>Kelola AOM</span>
     </a>
