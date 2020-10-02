@@ -10,7 +10,7 @@
 				<!-- Default box -->
 				<div class="box">
 					<div class="box-header with-border">
-						<h3 class="box-title">Summary</h3>
+						<h3 class="box-title">Summary Semuanya</h3>
 					</div>
 					    <div class="box-body">
                             <div class="col-md-4">
@@ -28,28 +28,10 @@
 
                             <div class="col-md-4">
                                 <!-- Info Boxes Style 2 -->
-                            <div class="info-box bg-green">
-                                <span class="info-box-icon"><i class="ion ion-ios-pie-outline"></i></span>
-
-                                <div class="info-box-content">
-                                <span class="info-box-text">OS</span>
-                                <span class="info-box-number">{{ "Rp. ". number_format(array_sum(json_decode ($OSData)), 2) }}</span>
-
-                                <div class="progress">
-                                    <div class="progress-bar" style="width: 50%"></div>
-                                </div>
-                                <span class="progress-description">
-                                        
-                                    </span>
-                                </div>
-                                </div>
-					        </div>
-                            <div class="col-md-4">
-                                <!-- Info Boxes Style 2 -->
                             <div class="info-box bg-blue">
                                 <span class="info-box-icon"><i class="ion ion-ios-pricetag-outline"></i></span>
                                 <div class="info-box-content">
-                                <span class="info-box-text">Jumlah Lancar</span>
+                                <span class="info-box-text">Jumlah Lancar Jaya</span>
                                 <span class="info-box-number">{{ "Rp. ".array_sum(json_decode ($OSLancar)) }}</span>
                                 <div class="progress">
                                     <div class="progress-bar" style="width: 0%"></div>
@@ -109,7 +91,7 @@
 				<!-- Default box -->
 				<div class="box">
 					<div class="box-header with-border">
-						<h3 class="box-title">Jumlah Pertumbuhan pengunjung Berdasarkan Unit</h3>
+						<h3 class="box-title">Jumlah Pertumbuhan pengunjung Berdasarkan Unitnya</h3>
 						<div class="box-tools pull-right">
 							<button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
 								<i class="fa fa-minus"></i></button>
